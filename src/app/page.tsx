@@ -1,15 +1,15 @@
 import Image from "next/image";
 
 import About from "@/components/About";
-import FeaturedProjects from "@/components/FeaturedProjects";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import UserProjects from "@/components/UserProjects";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <FeaturedProjects />
+      <UserProjects />
       <About />
       <Footer />
       <section className="flex justify-center px-6 py-16">
