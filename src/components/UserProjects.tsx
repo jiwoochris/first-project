@@ -38,13 +38,13 @@ export default async function UserProjects() {
       className="mx-auto w-full max-w-6xl scroll-mt-20 px-6 py-24"
     >
       <header className="mb-10 flex flex-col items-start gap-2">
-        <span className="text-xs uppercase tracking-widest text-indigo-300">
+        <span className="text-xs uppercase tracking-widest text-indigo-600">
           Community
         </span>
-        <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
           참여자가 올린 프로젝트
         </h2>
-        <p className="text-neutral-400">
+        <p className="text-neutral-500">
           로그인한 사용자가 직접 등록한 프로젝트입니다.
         </p>
       </header>
@@ -54,13 +54,13 @@ export default async function UserProjects() {
           <SubmitProjectModal />
         </div>
       ) : (
-        <div className="mb-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-sm text-neutral-300">
+        <div className="mb-10 rounded-2xl border border-neutral-200 bg-neutral-50 p-6 text-sm text-neutral-700">
           프로젝트를 등록하려면{" "}
-          <Link href="/login" className="font-medium text-white underline-offset-4 hover:underline">
+          <Link href="/login" className="font-medium text-neutral-900 underline-offset-4 hover:underline">
             로그인
           </Link>
           {" "}또는{" "}
-          <Link href="/signup" className="font-medium text-white underline-offset-4 hover:underline">
+          <Link href="/signup" className="font-medium text-neutral-900 underline-offset-4 hover:underline">
             회원가입
           </Link>
           이 필요합니다.
@@ -68,7 +68,7 @@ export default async function UserProjects() {
       )}
 
       {projects.length === 0 ? (
-        <p className="rounded-2xl border border-dashed border-white/10 bg-white/[0.02] px-6 py-12 text-center text-sm text-neutral-400">
+        <p className="rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 px-6 py-12 text-center text-sm text-neutral-500">
           아직 등록된 프로젝트가 없습니다. 첫 번째 프로젝트를 올려보세요!
         </p>
       ) : (
@@ -78,14 +78,14 @@ export default async function UserProjects() {
             return (
               <li
                 key={project.id}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition hover:border-white/20 hover:bg-white/[0.04]"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition hover:border-neutral-300 hover:bg-neutral-50"
               >
                 {project.image_url && (
                   <a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block aspect-video w-full overflow-hidden bg-neutral-900"
+                    className="block aspect-video w-full overflow-hidden bg-neutral-100"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
@@ -97,12 +97,12 @@ export default async function UserProjects() {
                   </a>
                 )}
                 <div className="flex flex-1 flex-col p-5">
-                <h3 className="text-lg font-semibold text-white">
+                <h3 className="text-lg font-semibold text-neutral-900">
                   <a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition hover:text-indigo-300"
+                    className="transition hover:text-indigo-600"
                   >
                     {project.title}
                   </a>
@@ -111,12 +111,12 @@ export default async function UserProjects() {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-1 truncate text-sm text-neutral-400 transition hover:text-neutral-200"
+                  className="mt-1 truncate text-sm text-neutral-500 transition hover:text-neutral-700"
                 >
                   {formatHost(project.url)}
                 </a>
                 {project.description && (
-                  <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-neutral-300">
+                  <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-neutral-700">
                     {project.description}
                   </p>
                 )}
@@ -131,7 +131,7 @@ export default async function UserProjects() {
                     <input type="hidden" name="id" value={project.id} />
                     <button
                       type="submit"
-                      className="text-xs font-medium text-rose-300 transition hover:text-rose-200"
+                      className="text-xs font-medium text-rose-600 transition hover:text-rose-700"
                     >
                       삭제
                     </button>

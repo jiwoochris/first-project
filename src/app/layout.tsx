@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="ko"
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-neutral-950 text-neutral-100">
+      <body className="flex min-h-full flex-col bg-white text-neutral-900">
         <AuthNav />
         {children}
       </body>

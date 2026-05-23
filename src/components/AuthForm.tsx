@@ -49,15 +49,15 @@ export default function AuthForm({
   const copy = COPY[mode];
 
   return (
-    <div className="mx-auto w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-8 shadow-xl backdrop-blur">
-      <h1 className="text-2xl font-semibold text-white">{copy.title}</h1>
-      <p className="mt-2 text-sm text-neutral-400">{copy.subtitle}</p>
+    <div className="mx-auto w-full max-w-md rounded-2xl border border-neutral-200 bg-white p-8 shadow-xl">
+      <h1 className="text-2xl font-semibold text-neutral-900">{copy.title}</h1>
+      <p className="mt-2 text-sm text-neutral-500">{copy.subtitle}</p>
 
       <form action={formAction} className="mt-8 space-y-5">
         <div>
           <label
             htmlFor="email"
-            className="mb-2 block text-xs font-medium uppercase tracking-widest text-neutral-300"
+            className="mb-2 block text-xs font-medium uppercase tracking-widest text-neutral-700"
           >
             이메일
           </label>
@@ -67,7 +67,7 @@ export default function AuthForm({
             type="email"
             autoComplete="email"
             required
-            className="w-full rounded-lg border border-white/10 bg-neutral-900/60 px-3 py-2.5 text-sm text-white placeholder:text-neutral-500 focus:border-white/30 focus:outline-none"
+            className="w-full rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-500 focus:outline-none"
             placeholder="you@example.com"
           />
         </div>
@@ -75,7 +75,7 @@ export default function AuthForm({
         <div>
           <label
             htmlFor="password"
-            className="mb-2 block text-xs font-medium uppercase tracking-widest text-neutral-300"
+            className="mb-2 block text-xs font-medium uppercase tracking-widest text-neutral-700"
           >
             비밀번호
           </label>
@@ -86,18 +86,18 @@ export default function AuthForm({
             autoComplete={mode === "login" ? "current-password" : "new-password"}
             required
             minLength={6}
-            className="w-full rounded-lg border border-white/10 bg-neutral-900/60 px-3 py-2.5 text-sm text-white placeholder:text-neutral-500 focus:border-white/30 focus:outline-none"
+            className="w-full rounded-lg border border-neutral-300 bg-white px-3 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-500 focus:outline-none"
             placeholder="••••••••"
           />
         </div>
 
         {state?.error && (
-          <p className="rounded-md border border-rose-500/30 bg-rose-500/10 px-3 py-2 text-sm text-rose-200">
+          <p className="rounded-md border border-rose-300 bg-rose-50 px-3 py-2 text-sm text-rose-700">
             {state.error}
           </p>
         )}
         {state?.message && (
-          <p className="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-sm text-emerald-200">
+          <p className="rounded-md border border-emerald-300 bg-emerald-50 px-3 py-2 text-sm text-emerald-700">
             {state.message}
           </p>
         )}
@@ -105,17 +105,17 @@ export default function AuthForm({
         <button
           type="submit"
           disabled={pending}
-          className="inline-flex h-11 w-full items-center justify-center rounded-full bg-white px-6 text-sm font-medium text-neutral-900 transition hover:bg-neutral-200 disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex h-11 w-full items-center justify-center rounded-full bg-neutral-900 px-6 text-sm font-medium text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {pending ? "처리 중…" : copy.submit}
         </button>
       </form>
 
-      <p className="mt-6 text-center text-sm text-neutral-400">
+      <p className="mt-6 text-center text-sm text-neutral-500">
         {copy.altPrompt}{" "}
         <Link
           href={copy.altHref}
-          className="font-medium text-white underline-offset-4 hover:underline"
+          className="font-medium text-neutral-900 underline-offset-4 hover:underline"
         >
           {copy.altLabel}
         </Link>

@@ -4,14 +4,14 @@ export default function About() {
       id="about"
       className="mx-auto w-full max-w-4xl scroll-mt-20 px-6 py-24"
     >
-      <div className="rounded-3xl border border-white/10 bg-white/[0.02] p-10 sm:p-14">
-        <span className="text-xs uppercase tracking-widest text-indigo-300">
+      <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-10 sm:p-14">
+        <span className="text-xs uppercase tracking-widest text-indigo-600">
           About
         </span>
-        <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h2 className="mt-2 text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
           이 갤러리에 대하여
         </h2>
-        <p className="mt-4 leading-relaxed text-neutral-300">
+        <p className="mt-4 leading-relaxed text-neutral-700">
           이 사이트는 제가 학습하면서 만든 다양한 웹 프로젝트들을 모아두는
           개인 전시관입니다. 각 프로젝트는 짧은 설명과 함께 데모/소스 코드
           링크로 연결되어, 결과물뿐 아니라 과정도 함께 살펴볼 수 있도록

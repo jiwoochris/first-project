@@ -24,7 +24,7 @@ export default function Home() {
             alt="윤권 — Threads 프로필 열기"
             width={720}
             height={720}
-            className="h-auto w-full max-w-xs rounded-2xl border border-white/10 shadow-lg"
+            className="h-auto w-full max-w-xs rounded-2xl border border-neutral-200 shadow-lg"
           />
         </a>
       </section>
